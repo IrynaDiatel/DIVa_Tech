@@ -1,0 +1,74 @@
+.container {
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-inter), sans-serif;
+  margin-left: 1rem;
+}
+
+.toggleBtn {
+  background: var(--gradient);
+  border: 1px solid transparent;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.toggleBtn:hover, .toggleBtn.active {
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+  transform: translateY(-1px);
+}
+
+.arrow {
+  transition: transform 0.2s ease;
+}
+
+.toggleBtn.active .arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background: rgba(30, 20, 45, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 80px;
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.langBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.langBtn:hover {
+  color: white;
+  background: var(--gradient);
+}
+
+.langBtn.selected {
+  background: rgba(168, 85, 247, 0.3); /* Purple tint */
+  color: white;
+}
