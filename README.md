@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DIVa Tech | Web Development Portfolio
 
-## Getting Started
+Welcome to the official repository of **DIVa Tech**, my personal portfolio and web development studio website. This project showcases my expertise in building modern, high-performance web applications and serves as a digital business card for potential clients and collaborators.
 
-First, run the development server:
+## 🚀 Live Preview
+**Website:** [divatech.studio](https://divatech.studio) *(Update this link to your actual production URL)*
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 💡 About The Project
+This website was built to demonstrate my skills as a Full-Stack Developer and provide a comprehensive overview of my services, including:
+- **Corporate Websites**
+- **Landing Pages**
+- **Custom Web Applications**
+- **E-commerce Solutions**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The site features a custom dark-themed aesthetic with smooth scroll animations, localized content, and fully responsive layouts that look great on any device.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Built With
+This project leverages modern web technologies to ensure optimal performance, SEO, and developer experience:
+- **[Next.js (App Router)](https://nextjs.org/)** - React framework for production
+- **[React](https://reactjs.org/)** - UI Library
+- **[TypeScript](https://www.typescriptlang.org/)** - Static typing for robust code
+- **CSS Modules** - Scoped and maintainable styling
+- **Google Analytics** - Using `@next/third-parties/google`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ⚙️ Getting Started
 
-## Learn More
+To run this project locally, follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/IrynaDiatel/DIVa_Tech.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd DIVa_Tech
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Set up environment variables:
+   Create a `.env.local` file in the root directory and add your Google Analytics ID (optional):
+   ```env
+   NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+   ```
+5. Start the development server:
+   ```bash
+   npm run dev
+   ```
+6. Open [http://localhost:3000](http://localhost:3000) in your browser to view the site.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📈 SEO & Performance
+- **SEO Optimized:** Implemented dynamic Next.js Metadata API, semantic HTML tags, and OpenGraph configuration for social sharing.
+- **Fast Delivery:** Built with Turbopack for lightning-fast local development and optimized production builds.
 
-## Deploy on Vercel
+## 📫 Let's Connect
+I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **GitHub:** [@IrynaDiatel](https://github.com/IrynaDiatel)
+- **LinkedIn:** [Iryna Diatel](https://www.linkedin.com/in/iryna-diatel/)
+- **Telegram:** [@Iryna_Diatel](https://t.me/Iryna_Diatel)
+- **Email:** iryna.diatel.dev@gmail.com
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*© 2024 DIVa Tech. All rights reserved.*

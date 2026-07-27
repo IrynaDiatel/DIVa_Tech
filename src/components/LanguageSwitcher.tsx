@@ -2,18 +2,24 @@
 
 import { useState, useRef, useEffect } from "react";
 import styles from "./LanguageSwitcher.module.css";
+import { useLanguage } from "../context/LanguageContext";
+import { Language } from "../i18n/dictionaries";
 
-const languages = ["RU", "UA", "EN"];
+const languages: Language[] = ["RU", "UA", "EN"];
 
 export default function LanguageSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLang, setSelectedLang] = useState("UA");
+  const { language: selectedLang, setLanguage: setSelectedLang } =
+    useLanguage();
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
       }
     };
@@ -24,16 +30,26 @@ export default function LanguageSwitcher() {
 
   return (
     <div className={styles.container} ref={dropdownRef}>
-      <button 
+      <button
         className={`${styles.toggleBtn} ${isOpen ? styles.active : ""}`}
         onClick={() => setIsOpen(!isOpen)}
       >
         {selectedLang}
-        <svg 
-          className={styles.arrow} 
-          width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"
+        <svg
+          className={styles.arrow}
+          width="10"
+          height="6"
+          viewBox="0 0 10 6"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <path
+            d="M1 1L5 5L9 1"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       </button>
 

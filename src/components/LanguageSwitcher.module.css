@@ -20,7 +20,8 @@
   transition: all 0.2s ease;
 }
 
-.toggleBtn:hover, .toggleBtn.active {
+.toggleBtn:hover,
+.toggleBtn.active {
   box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
   transform: translateY(-1px);
 }

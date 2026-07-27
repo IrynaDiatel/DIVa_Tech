@@ -13,12 +13,15 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "DIVa Tech | Професійна розробка сайтів та веб-додатків",
-  description: "Професійний сайт — сильний бізнес. DIVa Tech створює сучасні сайти та веб-додатки, що працюють на результат вашого бізнесу. Швидкість, якість та індивідуальний підхід.",
-  keywords: "розробка сайтів, створення сайтів, веб-розробка, веб-додатки, Full Stack Developer, React, Next.js, TypeScript, JavaScript, UI/UX, адаптивний дизайн, SEO, сайт для бізнесу, корпоративний сайт, landing page, інтернет-магазин",
+  title: "Розробка сайтів та веб-додатків для бізнесу | DIVa Tech",
+  description:
+    "Розробка сучасних сайтів та веб-додатків для вашого бізнесу під ключ. Швидкість, адаптивний дизайн та SEO-оптимізація. Замовляйте консультацію!",
+  keywords:
+    "розробка сайтів, створення сайтів, веб-розробка, веб-додатки, Full Stack Developer, React, Next.js, TypeScript, JavaScript, UI/UX, адаптивний дизайн, SEO, сайт для бізнесу, корпоративний сайт, landing page, інтернет-магазин",
   openGraph: {
-    title: "DIVa Tech | Професійна розробка сайтів та веб-додатків",
-    description: "Професійний сайт — сильний бізнес. DIVa Tech створює сучасні сайти та веб-додатки, що працюють на результат вашого бізнесу. Швидкість, якість та індивідуальний підхід.",
+    title: "Розробка сайтів та веб-додатків для бізнесу | DIVa Tech",
+    description:
+      "Розробка сучасних сайтів та веб-додатків для вашого бізнесу під ключ. Швидкість, адаптивний дизайн та SEO-оптимізація. Замовляйте консультацію!",
     url: "https://divatech.studio",
     siteName: "DIVa Tech",
     locale: "uk_UA",
@@ -26,12 +29,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "DIVa Tech | Професійна розробка сайтів та веб-додатків",
-    description: "Професійний сайт — сильний бізнес. DIVa Tech створює сучасні сайти та веб-додатки, що працюють на результат вашого бізнесу.",
+    title: "Розробка сайтів та веб-додатків для бізнесу | DIVa Tech",
+    description:
+      "Розробка сучасних сайтів та веб-додатків для вашого бізнесу під ключ. Швидкість, адаптивний дизайн та SEO-оптимізація. Замовляйте консультацію!",
   },
 };
 
 import CursorGlow from "../components/CursorGlow";
+import ScrollObserver from "../components/ScrollObserver";
+import { LanguageProvider } from "../context/LanguageContext";
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 export default function RootLayout({
   children,
@@ -41,8 +48,14 @@ export default function RootLayout({
   return (
     <html lang="uk" className={`${inter.variable} ${outfit.variable}`}>
       <body>
-        <CursorGlow />
-        {children}
+        <LanguageProvider>
+          <CursorGlow />
+          <ScrollObserver />
+          {children}
+        </LanguageProvider>
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
       </body>
     </html>
   );
